@@ -1,0 +1,24 @@
+
+type Mutation {
+    createUser(userRequest:UserRequest):User
+}
+
+input UserRequest {
+    name:String
+    emailId:String
+    mobileNo:String
+    age:Int
+}
+
+type Query {
+    allUsers:[User]
+    getUser(id:Int):User
+}
+
+type User {
+    userId:ID!
+    name:String
+    emailId:String
+    mobileNo:String
+    age:Int
+}
